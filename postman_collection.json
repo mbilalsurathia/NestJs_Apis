@@ -1,0 +1,366 @@
+{
+	"info": {
+		"_postman_id": "8b471368-4c14-4853-b428-1e1386f585f4",
+		"name": "AVA-FIVE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31059488"
+	},
+	"item": [
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"bilal@gmail.com\",\n    \"username\":\"bilal\",\n    \"password\":\"123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"bilal@gmail.com\",\n    \"username\":\"bilal123\",\n    \"password\":\"09876\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/users/2cdd9f07-82f7-44b2-83c7-4f56da38b98a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"2cdd9f07-82f7-44b2-83c7-4f56da38b98a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET USERS",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUserByID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/users/3c832ff7-b18d-4f0e-ac90-336bcd74ab63",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"3c832ff7-b18d-4f0e-ac90-336bcd74ab63"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete UserByID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/users/2cdd9f07-82f7-44b2-83c7-4f56da38b98a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"2cdd9f07-82f7-44b2-83c7-4f56da38b98a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateProduct",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"AC\",\n    \"description\":\"Air conditioner\",\n    \"price\":1000,\n    \"quantity\":10\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3002/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Bottle\",\n    \"description\":\"Water Bottle\",\n    \"price\":500,\n    \"quantity\":150\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3002/products/14e7b3fb-3b7a-4df3-a3b5-39a6b97b2546",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"products",
+						"14e7b3fb-3b7a-4df3-a3b5-39a6b97b2546"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetProducts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3002/products/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"products",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetProductByID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3002/products/14e7b3fb-3b7a-4df3-a3b5-39a6b97b2546",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"products",
+						"14e7b3fb-3b7a-4df3-a3b5-39a6b97b2546"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete ProductByID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3002/products/14e7b3fb-3b7a-4df3-a3b5-39a6b97b2546",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"products",
+						"14e7b3fb-3b7a-4df3-a3b5-39a6b97b2546"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"productId\":\"ff7904d1-ff88-4492-901a-18d9d4349f97\",\n    \"quantity\":\"10\",\n    \"userId\":\"f78a7785-e428-4a51-9379-b554175215e8\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"productId\":\"ff7904d1-ff88-4492-901a-18d9d4349f97\",\n    \"quantity\":\"5\",\n    \"userId\":\"f78a7785-e428-4a51-9379-b554175215e8\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/orders/2a2b09aa-6cfc-410f-a97b-9abc277629c8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"orders",
+						"2a2b09aa-6cfc-410f-a97b-9abc277629c8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Orders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Orders By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/orders/1185ce24-4413-4cdf-a7d1-795ffaec8c74",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"orders",
+						"1185ce24-4413-4cdf-a7d1-795ffaec8c74"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Order By ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/orders/b1483a30-8bef-4df7-95f7-0f54cb9f2958",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"orders",
+						"b1483a30-8bef-4df7-95f7-0f54cb9f2958"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

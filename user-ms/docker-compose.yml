@@ -1,0 +1,62 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: my-nestjs-app
+    ports:
+      - '3000:3000' # Map the app's port to the host
+    depends_on:
+      - db
+      - kafka
+  order:
+    build:
+      context: .
+      dockerfile: ../order-service/Dockerfile
+    container_name: order-ms
+    ports:
+      - '3001:3001' # Map the app's port to the host
+    depends_on:
+      - db
+      - kafka
+  product:
+    build:
+      context: .
+      dockerfile: ../product-service/Dockerfile
+    container_name: product-ms
+    ports:
+      - '3002:3002' # Map the app's port to the host
+    depends_on:
+      - db
+      - kafka
+  db:
+    image: postgres:latest
+    container_name: my-postgres-db
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_DB: mydb
+    ports:
+      - '5433:5432' # Map PostgreSQL's port to the host
+    command: -p 5433
+    expose:
+      - 5433
+  kafka:
+    image: confluentinc/cp-kafka:latest
+    container_name: kafka
+    ports:
+      - '9092:9092' # Map Kafka's port to the host
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
+      KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092
+  zookeeper:
+    image: confluentinc/cp-zookeeper:latest
+    container_name: zookeeper
+    ports:
+      - '2181:2181' # Map ZooKeeper's port to the host
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181

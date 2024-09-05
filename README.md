@@ -1,4 +1,4 @@
-You are tasked with designing and implementing a microservices-based system for a hypothetical e-commerce platform. The system should be able to handle various functionalities such as user management, product catalog, and order processing. The system's architecture should be based on NestJS microservices, using Docker Compose to manage the services, Postgres as the main database, and Kafka for asynchronous communication.
+The system's architecture should be based on NestJS microservices, using Docker Compose to manage the services, Postgres as the main database, and Kafka for asynchronous communication.
 --------------------------------------------------------------------------
 Created 3 Microservices
 user-ms
@@ -26,10 +26,8 @@ Now 6 services will deploy
 6) Zookeeper (Kafka need this images for message processing) (http://localhost:2181/) --> running on this port
 --------------------------------------------------------------------------
 All 3 Services have DockerFile which use for docker image
-I have added Postman Collection(AVA-FIVE.postman_collection.json) for the CRUD operations for all three services
+I have added Postman Collection(postman_collection.json) for the CRUD operations for all three services
 
 
 
 
-
-OWNER--> Muhammad Bilal
